@@ -1,0 +1,32 @@
+:root {
+  --blue: rgb(62, 155, 255);
+  --grey: rgb(202, 207, 213);
+  --white: rgb(242, 246, 251);
+  --orange: rgb(234, 169, 47);
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+  display: grid;
+  min-width: 100vw;
+  min-height: 100vh;
+  grid-template-columns: 275px 1fr;
+  grid-template-rows: 1fr 5fr;
+}
+
+.sidebar {
+  background-color: var(--blue);
+  grid-row: 1 / span 2;
+}
+
+.top-section {
+  background-color: var(--white);
+}
+
+.main-section {
+  background-color: var(--grey);
+}
