@@ -3,6 +3,7 @@
   --grey: rgb(202, 207, 213);
   --white: rgb(242, 246, 251);
   --orange: rgb(234, 169, 47);
+  --temp-overlay: rgba(105, 105, 105, 0.117);
 }
 html,
 body {
@@ -18,6 +19,10 @@ body {
   grid-template-rows: 1fr 5fr;
 }
 
+.container div {
+  padding: 15px;
+}
+
 .sidebar {
   background-color: var(--blue);
   grid-row: 1 / span 2;
@@ -29,4 +34,15 @@ body {
 
 .main-section {
   background-color: var(--grey);
+  display: grid;
+  grid-template: 1fr 1fr / 2fr 1fr;
+  gap: 15px;
+}
+
+.main-section > div {
+  background-color: var(--temp-overlay);
+}
+
+.your-projects {
+  grid-row: 1 / span 2;
 }
