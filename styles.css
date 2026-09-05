@@ -1,5 +1,5 @@
 :root {
-  --blue: rgb(62, 155, 255);
+  --blue: rgb(31, 135, 247);
   --grey: rgb(202, 207, 213);
   --white: rgb(242, 246, 251);
   --orange: rgb(234, 169, 47);
@@ -25,14 +25,14 @@ body {
 
 .container {
   display: grid;
-  min-width: 100vw;
-  min-height: 100vh;
+  width: 100vw;
+  height: 100vh;
   grid-template-columns: 275px 1fr;
   grid-template-rows: 1fr 5fr;
 }
 
-.container div {
-  padding: 15px;
+.container > div {
+  padding: 20px;
 }
 
 .sidebar {
@@ -92,9 +92,34 @@ body {
 }
 
 .main-section > div {
-  background-color: var(--temp-overlay);
+  display: grid;
+  grid-template-rows: 50px 1fr;
+  gap: 15px;
+}
+
+.main-section h3 {
+  margin-left: 15px;
+}
+
+.main-section > div > div {
+  background-color: var(--white);
+  display: grid;
+  grid-template-rows: 50px 1fr;
+  gap: 15px;
+  border-radius: 10px;
 }
 
 .your-projects {
   grid-row: 1 / span 2;
+}
+
+.main-section > div > div.your-projects-container {
+  display: grid;
+  grid-template: 1fr 1fr 1fr/ 1fr 1fr;
+  background-color: var(--grey);
+}
+
+.your-projects-container > div {
+  background-color: var(--white);
+  border-radius: 10px;
 }
