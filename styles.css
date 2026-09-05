@@ -4,6 +4,8 @@
   --white: rgb(242, 246, 251);
   --orange: rgb(234, 169, 47);
   --temp-overlay: rgba(105, 105, 105, 0.117);
+  --description-text: rgb(93, 96, 99);
+
   font-family:
     system-ui,
     -apple-system,
@@ -91,6 +93,17 @@ body {
   gap: 15px;
 }
 
+h4 {
+  margin-left: 15px;
+}
+
+.main-section p {
+  margin-left: 15px;
+  margin-top: -15px;
+  margin-right: 25px;
+  color: var(--description-text);
+}
+
 .main-section > div {
   display: grid;
   grid-template-rows: 50px 1fr;
@@ -122,4 +135,23 @@ body {
 .your-projects-container > div {
   background-color: var(--white);
   border-radius: 10px;
+  display: grid;
+  grid-template-columns: 10px 1fr;
+  grid-template-rows: 1fr 45px;
+}
+
+.your-projects-container div.orange-slice {
+  background-color: var(--orange);
+  grid-row: 1 / span 2;
+  border-radius: 10px 0 0 10px;
+}
+
+.your-projects-container div.project-interaction {
+  display: grid;
+  grid-template-columns: 30fr repeat(3, 1fr);
+  gap: 15px;
+}
+
+.your-projects-container div.project-interaction img {
+  width: 30px;
 }
