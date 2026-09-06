@@ -30,12 +30,14 @@ body {
   width: 100vw;
   height: 100vh;
   grid-template-columns: 275px 1fr;
-  grid-template-rows: 1fr 5fr;
+  grid-template-rows: 150px 5fr;
 }
 
 .container > div {
   padding: 20px;
 }
+
+/* SIDEBAR: */
 
 .sidebar {
   background-color: var(--blue);
@@ -82,9 +84,13 @@ body {
   width: 25px;
 }
 
+/* TOP SECTION: */
+
 .top-section {
   background-color: var(--white);
 }
+
+/* MAIN SECTION: */
 
 .main-section {
   background-color: var(--grey);
@@ -93,13 +99,14 @@ body {
   gap: 15px;
 }
 
-h4 {
+.main-section h4 {
   margin-left: 15px;
+  margin-right: 25px;
 }
 
 .main-section p {
   margin-left: 15px;
-  margin-top: -15px;
+  margin-top: -20px;
   margin-right: 25px;
   color: var(--description-text);
 }
@@ -116,8 +123,6 @@ h4 {
 
 .main-section > div > div {
   background-color: var(--white);
-  display: grid;
-  grid-template-rows: 50px 1fr;
   gap: 15px;
   border-radius: 10px;
 }
@@ -153,5 +158,27 @@ h4 {
 }
 
 .your-projects-container div.project-interaction img {
-  width: 30px;
+  width: 25px;
+}
+
+.main-section > div.announcements > div.announcements-list {
+  display: grid;
+  grid-template-rows: 1fr 2px 1fr 2px 1fr;
+  gap: 5px;
+  padding: 15px 0px;
+}
+
+.main-section > div.announcements > div.announcements-list > div.divider {
+  background-color: var(--temp-overlay);
+  margin: 0px 10px;
+  align-items: center;
+}
+
+.main-section > div.announcements > div.announcements-list p {
+  font-size: small;
+  margin-bottom: 0;
+}
+.main-section > div.announcements > div.announcements-list h5 {
+  margin-left: 15px;
+  margin-top: 5px;
 }
